@@ -1,22 +1,15 @@
 (function() {
   var app = angular.module('mainModule', [
-    'ui.router'
-  ]);
+    'ui.router',
+    'homeModule'
+  ])
+  .config(configFunction)
 
-  function config($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/home');
 
-    $stateProvider
+ configFunction.$inject = ['$urlRouterProvider'];
 
-      .state('home', {
-        url: '/home',
-        template: '<h1>The Night Out</h1><p>{{ message }}</p>',
-        controller: function($scope) {
-          $scope.message = "Welcome to The Night Out!";
-        }
-      });
-  }
+ function configFunction($urlRouterProvider) {
+   $urlRouterProvider.otherwise('/');
+ }
 
-  config['$inject'] = ['$stateProvider', '$urlRouterProvider'];
-  app.config(config);
 })();
