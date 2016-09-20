@@ -8,5 +8,7 @@
     ActivityController.$inject = [];
     function ActivityController(){
       var vm = this;
+
+      
     }
   })();
