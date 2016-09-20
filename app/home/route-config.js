@@ -11,7 +11,7 @@
 
       $stateProvider
         .state('home', {
-          url: '/home',
+          url: '/',
           templateUrl: 'home/home.html',
         });
 

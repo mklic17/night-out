@@ -3,7 +3,8 @@
     'ui.router',
     'homeModule',
     'layoutModule',
-    
+    'activityModule',
+
   ])
   .config(configFunction)
 
