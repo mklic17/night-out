@@ -1,13 +1,14 @@
-<form ng-submit="vm.addActivity(params)">
+<form ng-submit="vm.newSubmission()">
   <div class="row">
     <div class="small-12 small-centered columns">
       <div class="row">
 
         <div class="small-1 columns">
-          21+<input type="checkbox" ng-model="params.age">
+          21+<input type="checkbox" ng-model="vm.newSubmission.page">
         </div>
+
         <div class="small-3 columns">
-          <select ng-model="params.category">
+          <select ng-model="vm.newSumbission.category">
             <option value="" disabled selected>Category</option>
             <option value="Date">Date Night</option>
             <option value="Friends">Friends</option>
@@ -15,8 +16,9 @@
             <option value="Alone">Alone</option>
           </select>
         </div>
+
         <div class="small-3 columns">
-          <select ng-model="params.price">
+          <select ng-model="vm.newSubmission.price">
             <option value="" disabled selected>Price</option>
             <option value="$0-$25">$0-$25</option>
             <option value="$25-$50">$25-$50</option>
@@ -24,12 +26,15 @@
             <option value="$100+">$100+</option>
           </select>
         </div>
+
         <div class="small-4 columns">
-          <input type="text" ng-model="params.summary" placeholder="Summary">
+          <input type="text" ng-model="vm.newSubmission.summary" placeholder="Summary">
         </div>
+
         <div class="small-1 columns">
-          <button type="submit">Enter</button>
+          <button type="submit" class="button">Enter</button>
         </div>
+
       </div>
     </div>
   </div>
@@ -38,7 +43,6 @@
 
 <div class="row">
   <div class="small-12 columns">
-    <br>
     <center><h5>Ideas</h5></center>
     <table>
       <thead>
@@ -50,15 +54,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr >
-          <td>Yes</td>
-          <td>$20-$50</td>
-          <td>Friends</td>
-          <td>Canal</td>
-          <!-- <td><button class="button">Remove</button></td> -->
-        </tr>
+        <!-- append here -->
       </tbody>
     </table>
-
   </div>
 </div>

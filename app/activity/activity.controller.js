@@ -8,14 +8,15 @@
     ActivityController.$inject = [];
     function ActivityController(){
       var vm = this;
-      vm.addActivity = addActivity;
+      vm.newSubmission = new Submission();
 
-
-
-      function addActivity(params) {
-        console.log(params);
+      function Submission() {
+        this.age = false;
+        this.category = '';
+        this.price = '';
+        this.place = '';
+        console.log(this.category);
       }
-
 
     }
   })();
