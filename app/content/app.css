@@ -1,0 +1,11 @@
+.titleBar ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.titleBar ul li {
+  display: inline;
+}
+.titleBar ul li a {
+  text-decoration: none;
+}
