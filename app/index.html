@@ -12,25 +12,24 @@
   </head>
   <body>
 
-    <!-- Start Navbar -->
-    <div data-sticky-container>
-      <div class="title-bar titleBar" data-sticky data-options="marginTop:0;">
-        <center><h4>The Night Out</h4></center>
-      </div>
-    </div>
-<!-- end Navbar -->
-
-
+    <xt-navbar></xt-navbar>
     <div ui-view></div>
 
     <script src="bower_components/angular-loader/angular-loader.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 
+    <!-- main Module -->
     <script src="mainModule.js"></script>
 
+    <!-- home Modules -->
     <script src="home/home.module.js"></script>
     <script src="home/route-config.js"></script>
+
+    <!-- layout module -->
+    <script src="layout/layout.module.js"></script>
+    <script src="layout/navbar/navbar.directive.js"></script>
+  
 
   </body>
 </html>

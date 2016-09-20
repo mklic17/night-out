@@ -1,7 +1,9 @@
 (function() {
   var app = angular.module('mainModule', [
     'ui.router',
-    'homeModule'
+    'homeModule',
+    'layoutModule',
+    
   ])
   .config(configFunction)
 
