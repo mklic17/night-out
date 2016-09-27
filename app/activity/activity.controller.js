@@ -5,17 +5,17 @@
     .module('activityModule')
     .controller('ActivityController', ActivityController);
 
-    ActivityController.$inject = [];
-    function ActivityController(){
+    ActivityController.$inject = ['activityFactory'];
+    function ActivityController(activityFactory) {
       var vm = this;
-      vm.newSubmission = new Submission();
 
-      function Submission() {
-        this.age = false;
-        this.category = '';
-        this.price = '';
-        this.place = '';
-        console.log(this.category);
+      vm.addSubmission = addSubmission;
+      vm.newTask = new activityFactory.Task();
+
+
+      function addSubmission() {
+        vm.tasks.$add(vm.newTask);
+        vm.newTask = new activityFactory.Task();
       }
 
     }

@@ -1,14 +1,14 @@
-<form ng-submit="vm.newSubmission()">
+<form ng-submit="vm.addSubmission()">
   <div class="row">
     <div class="small-12 small-centered columns">
       <div class="row">
 
         <div class="small-1 columns">
-          21+<input type="checkbox" ng-model="vm.newSubmission.page">
+          21+<input type="checkbox" ng-model="vm.newTask.age">
         </div>
 
         <div class="small-3 columns">
-          <select ng-model="vm.newSumbission.category">
+          <select ng-model="vm.newTask.category">
             <option value="" disabled selected>Category</option>
             <option value="Date">Date Night</option>
             <option value="Friends">Friends</option>
@@ -18,7 +18,7 @@
         </div>
 
         <div class="small-3 columns">
-          <select ng-model="vm.newSubmission.price">
+          <select ng-model="vm.newTask.price">
             <option value="" disabled selected>Price</option>
             <option value="$0-$25">$0-$25</option>
             <option value="$25-$50">$25-$50</option>
@@ -28,7 +28,7 @@
         </div>
 
         <div class="small-4 columns">
-          <input type="text" ng-model="vm.newSubmission.summary" placeholder="Summary">
+          <input type="text" ng-model="vm.newTask.summary" placeholder="Summary">
         </div>
 
         <div class="small-1 columns">
@@ -54,7 +54,12 @@
         </tr>
       </thead>
       <tbody>
-        <!-- append here -->
+        <tr ng-repeat="task in vm.tasks">
+          <td>{{ task.age ? 'Yes' : 'No' }}</td>
+          <td>{{ task.price }}</td>
+          <td>{{ task.category }}</td>
+          <td>{{ task.place }}</td>
+        </tr>
       </tbody>
     </table>
   </div>

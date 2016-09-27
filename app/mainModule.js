@@ -1,18 +1,22 @@
 (function() {
-  var app = angular.module('mainModule', [
+  angular.module('mainModule', [
     'ui.router',
     'homeModule',
     'layoutModule',
     'activityModule',
+    'firebase',
+    'firebaseModule',
 
-  ])
-  .config(configFunction)
 
 
- configFunction.$inject = ['$urlRouterProvider'];
+  ]);
+  // .config(configFunction)
 
- function configFunction($urlRouterProvider) {
-   $urlRouterProvider.otherwise('/');
- }
+ //
+ // configFunction.$inject = ['$urlRouterProvider'];
+ //
+ // function configFunction($urlRouterProvider) {
+ //   $urlRouterProvider.otherwise('/');
+ // }
 
 })();

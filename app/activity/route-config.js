@@ -13,8 +13,6 @@
         templateUrl: 'activity/activity.html',
         controller: 'ActivityController',
         controllerAs: 'vm',
-        // bindToController: true,
-        // scope: {},
       });
   }
 })();
