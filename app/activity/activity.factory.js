@@ -10,14 +10,14 @@
       var service = {
         Task: Task,
         tasks: $firebaseArray(firebaseFactory.tasks),
-        
+
       };
 
       function Task() {
         this.age = false;
         this.category = '';
         this.price = '';
-        this.place = '';
+        this.summary = '';
       }
 
       return service;
