@@ -5,11 +5,14 @@
     .module('activityModule')
     .controller('ActivityController', ActivityController);
 
-    ActivityController.$inject = ['activityFactory'];
-    function ActivityController(activityFactory) {
+    ActivityController.$inject = ['activityFactory', 'firebaseFactory'];
+    function ActivityController(activityFactory, firebaseFactory) {
+
       var vm = this;
+      var tasksRef = firebase.database().ref().child('tasks');
 
       vm.addSubmission = addSubmission;
+      vm.tasks = activityFactory.tasks;
       vm.newTask = new activityFactory.Task();
 
 

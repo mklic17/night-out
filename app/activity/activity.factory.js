@@ -5,16 +5,13 @@
     .module('activityModule')
     .factory('activityFactory', activityFactory);
 
-    activityFactory.$inject = ['$firebaseArray','firebaseFactory'];
+    activityFactory.$inject = ['$firebaseArray', 'firebaseFactory'];
     function activityFactory($firebaseArray, firebaseFactory) {
-      var vm = this;
-      var task = null;
-
-
-      var factory = {
+      var service = {
         Task: Task,
-
-      }
+        tasks: $firebaseArray(firebaseFactory.tasks),
+        
+      };
 
       function Task() {
         this.age = false;
@@ -23,7 +20,7 @@
         this.place = '';
       }
 
-      return factory;
+      return service;
     }
 
 })();

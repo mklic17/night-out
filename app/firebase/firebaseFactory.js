@@ -7,17 +7,14 @@
 
     firebaseFactory.$inject = [];
     function firebaseFactory() {
+        var root = firebase.database().ref();
 
-      var root = firebase.database().ref();
+        var service = {
+          root: root,
+          tasks: root.child('tasks'),
+        }
 
-      var service = {
-        root: root,
-        tasks: root.child('tasks'),
-      }
-      return service;
-
-
+        return service;
     }
-
 
 })();
