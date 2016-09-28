@@ -1,18 +1,22 @@
 .titleBar {
   width: 100vw;
-  height: 7vh;
+  height: 10vh;
 }
+
 .titleBar ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
+
 .titleBar ul li {
   display: inline;
 }
+
 .titleBar ul li a {
   text-decoration: none;
 }
+
 .homeImage h5 {
    z-index:100;
    color:white;
@@ -29,4 +33,10 @@
   top:55px; /* Have this my dynamically resizing*/
   width: 100vw;
   height: 93vh;
+}
+
+.log-in-form {
+  border: 1px solid #cacaca;
+  padding: 1rem;
+  border-radius: 3px;
 }

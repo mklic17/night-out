@@ -1,9 +1,18 @@
-<div class="small-6 small-centered columns">
-  <form class="login" ng-submit="vm.login(vm.user)">
-    <h3>Login</h3>
-    <input type="text" placeholder="User Name" ng-model="vm.user.email" required autofocus>
-    <input type="text" placeholder="Password" ng-model="vm.user.password" required>
-    <button type="submit" name="button" class="button">Submit</button>
-  </form>
+<div class="row">
+    <div class="medium-6 medium-centered large-4 large-centered columns">
 
+        <form ng-submit="vm.login(vm.user)">
+            <div class="row column log-in-form">
+                <h4 class="text-center">Log in with you email account</h4>
+                <label>Email
+          <input type="text" placeholder="somebody@example.com" ng-model="vm.user.email">
+        </label>
+                <label>Password
+          <input type="password" placeholder="Password" ng-model="vm.user.password">
+        </label>
+                <p><a type="submit" class="button expanded">Log In</a></p>
+            </div>
+        </form>
+
+    </div>
 </div>
