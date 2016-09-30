@@ -18,6 +18,8 @@
         this.category = '';
         this.price = '';
         this.summary = '';
+        this.time = Math.floor(Date.now() / 1000);
+        
       }
 
       return service;

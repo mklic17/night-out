@@ -28,15 +28,24 @@
  }
 
 .homeImage img {
+  padding-top: 15px;
   position:absolute;
   left:0;
   top:55px; /* Have this my dynamically resizing*/
   width: 100vw;
   height: 93vh;
 }
-
 .log-in-form {
+  padding-top: 50px;
+}
+
+.log-in-form #start{
   border: 1px solid #cacaca;
   padding: 1rem;
   border-radius: 3px;
+}
+
+.toTable {
+  float: right;
+  
 }
