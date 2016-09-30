@@ -8,9 +8,7 @@
     ActivityController.$inject = ['activityFactory', 'firebaseFactory', '$state'];
     function ActivityController(activityFactory, firebaseFactory, $state) {
       var vm = this;
-      // vm.curTime = getTime();
       vm.getTime = getTime;
-
 
       vm.addSubmission = addSubmission;
       vm.tasks = activityFactory.tasks;
