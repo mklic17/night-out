@@ -13,6 +13,7 @@
         vm.register = register;
         vm.login = login;
         vm.logout = logout;
+        isLoggedIn = authFactory.isLoggedIn;
 
         vm.user = {
             email: '',

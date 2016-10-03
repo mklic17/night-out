@@ -8,11 +8,11 @@
           <th>Price</th>
           <th>Category</th>
           <th>Summary</th>
-          <th></th>
+          <th>Time</th>
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="task in vm.tasks.slice().reverse()">  
+        <tr ng-repeat="task in vm.tasks.slice().reverse()">
           <td>{{ task.age ? 'Yes' : 'No' }}</td>
           <td>{{ task.price }}</td>
           <td>{{ task.category }}</td>

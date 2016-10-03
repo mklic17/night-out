@@ -12,6 +12,8 @@
         var service = {
           root: root,
           tasks: root.child('tasks'),
+          users: root.child('users'),
+          
         }
 
         return service;
