@@ -7,8 +7,7 @@
     'authModule',
     'layoutModule',
     'firebaseModule',
-
-
+    'discoverModule',
 
   ]);
 

@@ -1,4 +1,3 @@
-
 (function() {
   'use strict';
 
@@ -8,7 +7,6 @@
 
     configFunction.$inject = ['$stateProvider'];
     function configFunction($stateProvider) {
-
 
       $stateProvider
         .state('home', {
