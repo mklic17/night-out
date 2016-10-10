@@ -28,10 +28,12 @@
       var start = firebaseFactory.refRoot.ref("tasks")
       start.orderByChild("category").equalTo(cont.category).on("child_added", function(snapshot) {
         var x = snapshot.val();
-        // console.log(x);
-        var z = createTableElement(x);
-        var here = document.getElementById('here');
-        here.appendChild(z)
+        if ((cont.price != '') && (snapshot.val().price == cont.price)){
+          // console.log(x);
+          var z = createTableElement(x);
+          var here = document.getElementById('here');
+          here.appendChild(z)
+        }
       });
     }
 

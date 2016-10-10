@@ -16,7 +16,7 @@
       function submitFunction(){
 
         var getTask = discoverFactory.getTasks(vm.SearchCont);
-        console.log(getTask);
+        // console.log(getTask);
 
       }
 
