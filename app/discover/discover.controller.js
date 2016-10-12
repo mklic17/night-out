@@ -13,8 +13,8 @@
       vm.submitFunction = submitFunction;
       vm.SearchCont = new discoverFactory.SearchCont();
 
-      function submitFunction(){
-
+      function submitFunction() {
+        // window.location.reload()
         var getTask = discoverFactory.getTasks(vm.SearchCont);
         // console.log(getTask);
 

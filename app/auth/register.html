@@ -1,7 +1,7 @@
 <div class="row">
     <div class="medium-6 medium-centered large-4 large-centered columns">
 
-        <form ng-submit="vm.login(vm.user)" class="log-in-form">
+        <form ng-submit="vm.register(vm.user)" class="log-in-form">
             <div class="row column" id="start">
                 <h4 class="text-center">Register</h4>
                 <label>Email
@@ -10,7 +10,7 @@
                 <label>Password
                   <input type="password" placeholder="Password" ng-model="vm.user.password">
                 </label>
-                <p><a type="submit" class="button expanded">Create an Account</a></p>
+                <p><button type="submit" class="button expanded">Create an Account</button></p>
                 <p class="text-center"><a href="#">Forgot your password?</a></p>
             </div>
         </form>

@@ -13,7 +13,7 @@
         vm.register = register;
         vm.login = login;
         vm.logout = logout;
-        isLoggedIn = authFactory.isLoggedIn;
+        // isLoggedIn = authFactory.isLoggedIn;
 
         vm.user = {
             email: '',
@@ -30,6 +30,7 @@
         }
 
         function login(user) {
+            console.log("Momma We made it")
             return authFactory.login(user)
                 .then(function(user) {
                     $state.go('activity');

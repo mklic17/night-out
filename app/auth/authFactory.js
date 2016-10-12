@@ -13,8 +13,8 @@
         register: register,
         login: login,
         logout: logout,
-        isLoggedIn: isLoggedIn,
-        
+        // isLoggedIn: isLoggedIn,
+
       };
 
       return service;
