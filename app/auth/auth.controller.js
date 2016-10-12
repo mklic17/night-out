@@ -30,7 +30,6 @@
         }
 
         function login(user) {
-            console.log("Momma We made it")
             return authFactory.login(user)
                 .then(function(user) {
                     $state.go('activity');
