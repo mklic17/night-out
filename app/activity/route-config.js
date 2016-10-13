@@ -30,6 +30,7 @@
   resolveUser.$inject= ['authFactory']
 
  function resolveUser(authFactory) {
+   console.log("Momma We Made It");
    return authFactory.auth.$requireSignIn();
  }
 })();

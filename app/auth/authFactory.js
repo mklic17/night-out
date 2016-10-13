@@ -14,7 +14,7 @@
         register: register,
         login: login,
         logout: logout,
-        // isLoggedIn: isLoggedIn,
+        isLoggedIn: isLoggedIn,
 
       };
 
@@ -31,6 +31,7 @@
       }
 
       function logout(){
+        console.log('Logged Out')
         auth.$signOut();
       }
 
