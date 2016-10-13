@@ -13,6 +13,10 @@
         getTime: getTime,
       };
 
+      return service;
+
+      /////////////////////////////////////////////
+
       function Task() {
         this.location = 'Indiana'
         this.age = false;
@@ -35,12 +39,14 @@
         else if (time < 86400){
           return `Posted ${Math.ceil(time / 3600)} hour(s) ago`;
         }
-        else {
+        else if (time < 604800){
           return `Posted ${Math.ceil(time / 86400)} day(s) ago`;
+        }
+        else {
+          return `Posted ${Math.ceil(time / 604800)} week(s) ago`;
         }
       }
 
-      return service;
     }
 
 })();

@@ -13,7 +13,7 @@
 
       vm.addSubmission = addSubmission;
       vm.tasks = activityFactory.tasks;
-      vm.newTask = new activityFactory.Task();
+      vm.newTask = new activityFactory.Task;
 
 
 

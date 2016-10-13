@@ -9,6 +9,12 @@
     'firebaseModule',
     'discoverModule',
 
-  ]);
+  ])
+  .config(configFunction);
+
+  configFunction.$inject = ['$urlRouterProvider']
+  function configFunction($urlRouterProvider){
+    $urlRouterProvider.otherwise("/");
+  }
 
 })();
