@@ -3,7 +3,7 @@
 
         <form ng-submit="vm.login(vm.user)" class="log-in-form">
             <div class="row column" id="start">
-                <h4 class="text-center">Log in with you email account</h4>
+                <h4 class="text-center">Log in</h4>
                 <label>Email
                     <input type="text" placeholder="somebody@example.com" ng-model="vm.user.email">
                 </label>
@@ -11,6 +11,7 @@
                     <input type="password" placeholder="Password" ng-model="vm.user.password">
                 </label>
                 <p><button type="submit" class="button expanded">Log In</button></p>
+                <p class="center">Don't have an account? <a ui-sref="register">register</a>
             </div>
         </form>
 
