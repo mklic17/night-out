@@ -24,7 +24,6 @@
 
 
       function logout(){
-        console.log('logout');
         authFactory.logout();
         $state.go('home');
       }

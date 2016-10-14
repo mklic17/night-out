@@ -31,7 +31,6 @@
       }
 
       function logout(){
-        console.log('Logged Out')
         auth.$signOut();
       }
 

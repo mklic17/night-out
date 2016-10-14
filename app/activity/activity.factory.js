@@ -50,7 +50,7 @@
       }
 
       function addOne(task) {
-        console.log(task);
+        // console.log(task);
         // tasks.$child('tasks').$child('title').$set("whatever")
 
         return task.likes += 1;

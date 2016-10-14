@@ -25,12 +25,22 @@
     }
     function getTasks(cont){
       // start.ref("tasks"); //you will need to know which object later
+      // var arr =  []
+      var here = document.getElementById('here');
+      while (here.hasChildNodes()){
+        here.removeChild(here.childNodes[0]);
+      }
+
       var start = firebaseFactory.refRoot.ref("tasks")
       start.orderByChild("category").equalTo(cont.category).on("child_added", function(snapshot) {
         var x = snapshot.val();
         if ((cont.price != '') && (snapshot.val().price == cont.price)){
-
+          console.log(snapshot.val());
+          console.log(here);
+          debugger
+          // debugger
           var z = createTableElement(x);
+          // arr.push(z)
           var here = document.getElementById('here');
           here.appendChild(z)
         }

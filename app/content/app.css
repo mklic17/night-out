@@ -83,6 +83,7 @@
    z-index:100;
    color:white;
    font-size:1.3em;
+   font-weight: 900;
    position:relative;
    text-align: center;
    top:100px; /* Have this my dynamically resizing*/

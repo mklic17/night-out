@@ -14,7 +14,6 @@
       vm.SearchCont = new discoverFactory.SearchCont();
 
       function submitFunction() {
-        // window.location.reload()
         var getTask = discoverFactory.getTasks(vm.SearchCont);
         // console.log(getTask);
 
