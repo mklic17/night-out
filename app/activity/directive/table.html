@@ -8,7 +8,10 @@
           <th>Price</th>
           <th>Category</th>
           <th>Summary</th>
+          <!-- <th>Likes</th> -->
           <th>Time</th>
+          <th>Rating</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -17,7 +20,10 @@
           <td>{{ task.price }}</td>
           <td>{{ task.category }}</td>
           <td>{{ task.summary }}</td>
+          <!-- <td>{{  task.likes  }} <a ng-click="vm.addOne(task)">+1</a></td> -->
           <td>{{ vm.getTime(task.time) }}</td>
+          <td>{{ task.rating }}</td>
+          <td><a ng-click="vm.remove(task)"><i class="fa fa-remove"></i></a></td>
         </tr>
       </tbody>
     </table>

@@ -11,6 +11,7 @@
         Task: Task,
         tasks: $firebaseArray(firebaseFactory.tasks),
         getTime: getTime,
+        addOne: addOne,
       };
 
       return service;
@@ -25,7 +26,8 @@
         this.summary = '';
         this.fullDesc = ''
         this.time = Math.floor(Date.now() / 1000);
-        this.likes = 0;
+        this.rating
+        // this.likes = 0;
 
       }
 
@@ -45,6 +47,17 @@
         else {
           return `Posted ${Math.ceil(time / 604800)} week(s) ago`;
         }
+      }
+
+      function addOne(task) {
+        console.log(task);
+        // tasks.$child('tasks').$child('title').$set("whatever")
+
+        return task.likes += 1;
+        // firebaseFactory.root.on('click', function(snap){
+        //   console.log(snap);
+        // })
+
       }
 
     }
