@@ -19,9 +19,9 @@
     ///////////////////////////
 
     function SearchCont(){
-      // this.age = false; // Maybe change this somehow to search for both
+      this.age = ''; // Maybe change this somehow to search for both
       this.category = '';
-      // this.price = '';
+      this.price = '';
     }
     function getTasks(cont){
       // start.ref("tasks"); //you will need to know which object later
@@ -35,9 +35,13 @@
       start.orderByChild("category").equalTo(cont.category).on("child_added", function(snapshot) {
         var x = snapshot.val();
         if ((cont.price != '') && (x.price == cont.price)){
-          var z = createTableElement(x);
-          var here = document.getElementById('here');
-          here.appendChild(z)
+          console.log(cont.age);
+          console.log(x.age);
+          if ((x.age === cont.age) || (cont.age === '')){
+            var z = createTableElement(x);
+            var here = document.getElementById('here');
+            here.appendChild(z)
+          }
         }
       });
     }

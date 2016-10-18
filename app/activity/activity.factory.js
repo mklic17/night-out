@@ -20,13 +20,12 @@
 
       function Task() {
         this.location = 'Indiana'
-        this.age = false;
+        this.age = 'No';
         this.category = '';
         this.price = '';
         this.summary = '';
         this.fullDesc = ''
         this.time = Math.floor(Date.now() / 1000);
-        this.rating
         // this.likes = 0;
 
       }
