@@ -19,7 +19,7 @@
       /////////////////////////////////////////////
 
       function Task() {
-        this.location = 'Indiana'
+        this.location = ''
         this.age = 'No';
         this.category = '';
         this.price = '';

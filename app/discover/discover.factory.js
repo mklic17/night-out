@@ -37,11 +37,18 @@
         if ((cont.price != '') && (x.price == cont.price)){
           console.log(cont.age);
           console.log(x.age);
+          var here = document.getElementById('here');
           if ((x.age === cont.age) || (cont.age === '')){
             var z = createTableElement(x);
-            var here = document.getElementById('here');
             here.appendChild(z)
           }
+          // else {
+          //   var tr = document.createElement('tr');
+          //   var td = document.createElement('td');
+          //   td.innerHTML = 'Nothing Found';
+          //   tr.appendChild(td);
+          // }
+          
         }
       });
     }
@@ -54,6 +61,12 @@
         createTd(x.summary, tr);
         createTd(getTime(x.time), tr);
         return tr;
+    }
+
+    function createTd(item, tr){
+      var td = document.createElement('td')
+      td.innerHTML = item;
+      tr.appendChild(td);
     }
 
     function getTime(oldTime){
@@ -72,12 +85,6 @@
       else {
         return `Posted ${Math.ceil(time / 604800)} week(s) ago`;
       }
-    }
-
-    function createTd(item, tr){
-      var td = document.createElement('td')
-      td.innerHTML = item;
-      tr.appendChild(td);
     }
 
   }

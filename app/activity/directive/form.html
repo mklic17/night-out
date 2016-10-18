@@ -4,6 +4,10 @@
     <div class="small-11 small-centered columns">
       <div class="row">
 
+        <!-- <div class="small-2 columns">
+          <input type="text" ng-model="vm.newTask.location" placeholder="City" required>
+        </div> -->
+
         <div class="small-2 columns">
           <select ng-model="vm.newTask.age" required>
             <option value="" disabled selected>Age</option>
@@ -23,7 +27,7 @@
           </select>
         </div>
 
-        <div class="small-3 columns">
+        <div class="small-2 columns">
           <select ng-model="vm.newTask.price" class="price" name="price" required>
             <option value="" disabled selected>Price</option>
             <option value="$0-$25">$0-$25</option>
@@ -33,7 +37,7 @@
           </select>
         </div>
 
-        <div class="small-4 columns">
+        <div class="small-3 columns">
           <input type="text" ng-model="vm.newTask.summary" placeholder="Short Summary..." class="place" name="place" required>
         </div>
       </div>

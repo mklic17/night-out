@@ -9,13 +9,11 @@
     function DiscoverController(discoverFactory) {
 
       var vm = this;
-      // vm.getTask = discoverFactory.getTasks
       vm.submitFunction = submitFunction;
       vm.SearchCont = new discoverFactory.SearchCont();
 
       function submitFunction() {
         var getTask = discoverFactory.getTasks(vm.SearchCont);
-        // console.log(getTask);
 
       }
 
