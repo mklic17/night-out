@@ -34,13 +34,8 @@
       var start = firebaseFactory.refRoot.ref("tasks")
       start.orderByChild("category").equalTo(cont.category).on("child_added", function(snapshot) {
         var x = snapshot.val();
-        if ((cont.price != '') && (snapshot.val().price == cont.price)){
-          console.log(snapshot.val());
-          console.log(here);
-          debugger
-          // debugger
+        if ((cont.price != '') && (x.price == cont.price)){
           var z = createTableElement(x);
-          // arr.push(z)
           var here = document.getElementById('here');
           here.appendChild(z)
         }
@@ -49,13 +44,32 @@
 
     function createTableElement(x){
         var tr = document.createElement('tr');
-        createTd(x.age, tr);
+        createTd(x.age ? 'Yes' : 'No', tr);
         createTd(x.price, tr);
         createTd(x.category, tr);
         createTd(x.summary, tr);
-        createTd(x.time, tr);
+        createTd(getTime(x.time), tr);
         return tr;
     }
+
+    function getTime(oldTime){
+      var newTime = Math.floor(Date.now() / 1000);
+      var time = newTime - oldTime;
+
+      if (time < 3600){
+        return `Posted ${Math.ceil(time / 60)} minute(s) ago`;
+      }
+      else if (time < 86400){
+        return `Posted ${Math.ceil(time / 3600)} hour(s) ago`;
+      }
+      else if (time < 604800){
+        return `Posted ${Math.ceil(time / 86400)} day(s) ago`;
+      }
+      else {
+        return `Posted ${Math.ceil(time / 604800)} week(s) ago`;
+      }
+    }
+
     function createTd(item, tr){
       var td = document.createElement('td')
       td.innerHTML = item;

@@ -1,13 +1,13 @@
-<div class="Searchbar row">
+<div class="searchBar row">
   <form ng-submit="vm.submitFunction()" class="small-12 small-centered columns">
-    
+
     <!-- <select ng-model="vm.SearchCont.age">
       <option value="" disabled selected>Category</option>
       <option value="false">21-</option>
       <option value="true">21+</option>
     </select> -->
 
-    <div class="small-6 columns">
+    <div class="small-5 columns">
       <select ng-model="vm.SearchCont.category">
         <option value="" disabled selected>Category</option>
         <option value="Date">Date Night</option>
@@ -17,7 +17,7 @@
       </select>
     </div>
 
-    <div class="small-6 columns">
+    <div class="small-5 columns">
       <select ng-model="vm.SearchCont.price">
         <option value="" disabled selected>Price</option>
         <option value="$0-$25">$0-$25</option>
@@ -27,7 +27,9 @@
       </select>
     </div>
 
-    <button type="submit">Search</button>
+    <div class="small-2 columns">
+      <button type="submit" class="button">Search</button>
+    </div>
 
   </form>
 </div>
