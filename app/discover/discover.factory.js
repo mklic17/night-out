@@ -19,7 +19,8 @@
     ///////////////////////////
 
     function SearchCont(){
-      this.age = ''; // Maybe change this somehow to search for both
+      this.location = '';
+      this.age = '';
       this.category = '';
       this.price = '';
     }
@@ -35,22 +36,14 @@
       start.orderByChild("category").equalTo(cont.category).on("child_added", function(snapshot) {
         var x = snapshot.val();
         if ((cont.price != '') && (x.price == cont.price)){
-          console.log(cont.age);
-          console.log(x.age);
           var here = document.getElementById('here');
           if ((x.age === cont.age) || (cont.age === '')){
             var z = createTableElement(x);
             here.appendChild(z)
           }
-          // else {
-          //   var tr = document.createElement('tr');
-          //   var td = document.createElement('td');
-          //   td.innerHTML = 'Nothing Found';
-          //   tr.appendChild(td);
-          // }
-          
         }
       });
+      // Somehow setup an else
     }
 
     function createTableElement(x){
