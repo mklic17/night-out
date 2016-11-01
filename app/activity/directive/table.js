@@ -29,7 +29,9 @@
       ///////////////////////
 
       function addOne(task) {
-        vm.tasks.$save(task.likes+= 1)
+        task.likes += 1
+        console.log(task.likes);
+        vm.tasks.$save(task)
       }
 
       function getTime(oldTime){

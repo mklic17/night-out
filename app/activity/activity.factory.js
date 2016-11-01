@@ -44,7 +44,7 @@
         this.summary = '';
         this.fullDesc = ''
         this.time = Math.floor(Date.now() / 1000);
-        this.likes = 0;
+        this.likes = Math.floor(0);
       }
 
 
