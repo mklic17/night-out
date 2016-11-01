@@ -7,16 +7,34 @@
 
     activityFactory.$inject = ['$firebaseArray', 'firebaseFactory'];
     function activityFactory($firebaseArray, firebaseFactory) {
+
+      var tasks = null;
+
       var service = {
+
+        restart: restart,
         Task: Task,
-        tasks: $firebaseArray(firebaseFactory.tasks),
-        getTime: getTime,
-        addOne: addOne,
+        // tasksByUser: tasksByUser,
+        tasks: $firebaseArray(firebaseFactory.tasks)
       };
 
       return service;
 
       /////////////////////////////////////////////
+
+      function addOne(task) {
+        console.log(task);
+        sum = task.likes + 1
+        vm.tasks.$save(sum)
+
+      }
+
+      function restart() {
+        if (tasks) {
+          tasks.$destroy();
+          tasks = null;
+        }
+      }
 
       function Task() {
         this.location = ''
@@ -26,37 +44,12 @@
         this.summary = '';
         this.fullDesc = ''
         this.time = Math.floor(Date.now() / 1000);
-        // this.likes = 0;
-
+        this.likes = 0;
       }
 
-      function getTime(oldTime){
-        var newTime = Math.floor(Date.now() / 1000);
-        var time = newTime - oldTime;
 
-        if (time < 3600){
-          return `Posted ${Math.ceil(time / 60)} minute(s) ago`;
-        }
-        else if (time < 86400){
-          return `Posted ${Math.ceil(time / 3600)} hour(s) ago`;
-        }
-        else if (time < 604800){
-          return `Posted ${Math.ceil(time / 86400)} day(s) ago`;
-        }
-        else {
-          return `Posted ${Math.ceil(time / 604800)} week(s) ago`;
-        }
-      }
-
-      function addOne(task) {
-        // console.log(task);
-        // tasks.$child('tasks').$child('title').$set("whatever")
-
-        return task.likes += 1;
-        // firebaseFactory.root.on('click', function(snap){
-        //   console.log(snap);
-        // })
-
+      function tasksByUser(uid){
+        return $firebaseArray(firebaseFactory.users.child(uid).child('tasks'));
       }
 
     }

@@ -8,8 +8,8 @@
   </ul>
 
   <ul class="inline-list hide-for-small-only account-action">
-    <li ng-hide="vm.isLoggedIn()"><a data-reveal-id="myModal" ui-sref="login">Login</a></li>
-    <li ng-hide="vm.isLoggedIn()"><a ui-sref="register" data-reveal-id="myModal">Signup</a></li>
+    <li ng-hide="vm.isLoggedIn()"><a data-reveal-id="myModal" ui-sref="signIn">Sign In</a></li>
+    <li ng-hide="vm.isLoggedIn()"><a ui-sref="createAccount" data-reveal-id="myModal">Create Account</a></li>
     <li ng-show="vm.isLoggedIn()"><a ng-click="vm.logout()" data-reveal-id="myModal">Logout</a></li>
   </ul>
 </nav>

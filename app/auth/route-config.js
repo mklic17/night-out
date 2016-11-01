@@ -8,15 +8,15 @@
   configFunction.$inject = ['$stateProvider'];
   function configFunction($stateProvider){
     $stateProvider
-      .state('login', {
-        url: '/login',
-        templateUrl: 'auth/login.html',
+      .state('signIn', {
+        url: '/signIn',
+        templateUrl: 'auth/signIn.html',
         controller: 'AuthController',
         controllerAs: 'vm',
       })
-      .state('register', {
-        url: '/register',
-        templateUrl: 'auth/register.html',
+      .state('createAccount', {
+        url: '/createAccount',
+        templateUrl: 'auth/createAccount.html',
         controller: 'AuthController',
         controllerAs: 'vm',
       });

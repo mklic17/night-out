@@ -10,7 +10,8 @@
     function AuthController($state, authFactory) {
         var vm = this;
 
-        vm.register = register;
+        vm.createAccount = createAccount;
+        vm.error = null
         vm.login = login;
         vm.logout = logout;
 
@@ -19,23 +20,22 @@
             password: ''
         }
 
-        function register(user) {
-            return authFactory.register(user).then(function() {
-                    vm.login(user);
-                })
-                .catch(function(error) {
-                    console.log(error);
-                });
+        function createAccount(user) {
+            return authFactory.createAccount(user).then(function() {
+              vm.login(user);
+            })
+            .catch(function(error) {
+                vm.error = error;
+            });
         }
 
         function login(user) {
-            return authFactory.login(user)
-                .then(function(user) {
-                    $state.go('activity');
-                })
-                .catch(function(error) {
-                    console.log(error);
-                });
+            return authFactory.login(user).then(function(user) {
+                $state.go('activity');
+            })
+            .catch(function(error) {
+                vm.error = error;
+            });
         }
 
         function logout() {

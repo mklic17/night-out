@@ -1,6 +1,7 @@
+<a ui-sref="form" class="toTable">Add event <i class="fa fa-plus"></i></a>
 <div class="row">
   <div class="small-12 columns">
-    <center><h5>Night events for </h5></center> <!-- Make this be the location -->
+    <center><h5>Night events for (a location)</h5></center> <!-- Make this be the location -->
     <table>
       <thead>
         <tr>
@@ -8,7 +9,7 @@
           <th>Price</th>
           <th>Category</th>
           <th>Summary</th>
-          <!-- <th>Likes</th> -->
+          <th>Likes</th>
           <th>Time</th>
           <th></th>
         </tr>
@@ -19,7 +20,7 @@
           <td>{{ task.price }}</td>
           <td>{{ task.category }}</td>
           <td>{{ task.summary }}</td>
-          <!-- <td>{{  task.likes  }} <a ng-click="vm.addOne(task)">+1</a></td> -->
+          <td>{{ task.likes  }} <a ng-click="vm.addOne(task)"><i class="fa fa-thumbs-o-up"></i></a></td>
           <td>{{ vm.getTime(task.time) }}</td>
           <td><a ng-click="vm.remove(task)"><i class="fa fa-remove"></i></a></td>
         </tr>

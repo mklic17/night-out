@@ -5,24 +5,25 @@
     .module('authModule')
     .factory('authFactory', authFactory);
 
-  authFactory.$inject = ['$firebaseAuth'];
-  function authFactory($firebaseAuth) {
+  authFactory.$inject = ['$firebaseAuth', 'firebaseFactory', 'activityFactory'];
+  function authFactory($firebaseAuth, firebaseFactory, activityFactory) {
       var auth = $firebaseAuth();
 
       var service = {
         auth: auth,
-        register: register,
+        isLoggedIn: isLoggedIn,
         login: login,
         logout: logout,
-        isLoggedIn: isLoggedIn,
-
+        createAccount: createAccount,
+        // sendEmail: sendEmail
       };
 
       return service;
 
       /////////////////////////
 
-      function register(user) {
+
+      function createAccount(user) {
         return auth.$createUserWithEmailAndPassword(user.email, user.password);
       }
 
@@ -31,12 +32,19 @@
       }
 
       function logout(){
+        activityFactory.restart();
         auth.$signOut();
       }
 
       function isLoggedIn() {
         return auth.$getAuth();
       }
+
+      // function sendEmail() {
+      //   firebaseFactory.emails.push({
+      //     emailAddress: emailAddress
+      //   });
+      // }
 
   }
 

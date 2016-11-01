@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
     <div class="medium-6 medium-centered large-4 large-centered columns">
 
         <form ng-submit="vm.login(vm.user)" class="log-in-form">
@@ -16,4 +16,11 @@
         </form>
 
     </div>
-</div>
+</div> -->
+
+<xt-author-form
+  form-name="Sign in"
+  submit-function="vm.login(user)"
+  error = "vm.error"
+  message = "Don't have an account?"
+  page = "true"></xt-author-form>

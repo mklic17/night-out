@@ -13,7 +13,9 @@
       controller: NavController,
       controllerAs: 'vm',
       bindToController: true,
-
+      scope: {
+        
+      },
     };
 
     NavController.$inject = ['authFactory' ,'$state'];

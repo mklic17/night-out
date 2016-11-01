@@ -1,4 +1,4 @@
-<div class="row">
+<!-- <div class="row">
     <div class="medium-6 medium-centered large-4 large-centered columns">
 
         <form ng-submit="vm.register(vm.user)" class="log-in-form">
@@ -11,10 +11,17 @@
                   <input type="password" placeholder="Password" ng-model="vm.user.password">
                 </label>
                 <p><button type="submit" class="button expanded">Create an Account</button></p>
-                <!-- <p class="text-center"><a href="#">Forgot your password?</a></p> -->
+                <p class="text-center"><a href="#">Forgot your password?</a></p>
                 <p class="center">Already have an Account? <a ui-sref="login">login</a>
             </div>
         </form>
 
     </div>
-</div>
+</div> -->
+
+<xt-author-form
+    submit-function="vm.createAccount(user)"
+    error = "vm.error"
+    form-name="Create Account"
+    message="Already have an Account?"
+    page: "false"></xt-author-form>
