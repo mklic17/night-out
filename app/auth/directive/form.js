@@ -17,7 +17,8 @@
           formName: '@',
           error: '=',
           message: '@',
-          page: '@'
+          page: '@',
+          other: '@',
         },
       };
     }
@@ -28,7 +29,8 @@
 
       vm.user = {
         email: '',
-        password: ''
+        password: '',
+        confirm: '',
       }
     }
 

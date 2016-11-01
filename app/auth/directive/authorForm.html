@@ -25,14 +25,18 @@
                   <input type="password" required placeholder="Password" ng-model="vm.user.password">
                 </label>
 
+                <label ng-hide="vm.other">Confirm password
+                  <input type="password" placeholder="Confirm Password" ng-model="vm.user.confirm" required>
+                </label>
+
                 <div class="error center" ng-show="authorForm.$submitted && authorForm.password.$error.required">
                     Password is blank
                 </div>
 
-                <p><button type="submit" ng-bind="vm.formName" class="button expanded"></button></p>
+                <p><button type="submit" ng-bind="vm.formName" class="button success expanded"></button></p>
 
-                <p class="center" ng-hide="vm.page">{{ vm.message }}<a ui-sref="signIn"> Sign In</a></p>
-                <p class="center" ng-show="vm.page">{{ vm.message }}<a ui-sref="createAccount"> Create Account</a></p>
+                <p class="center" ng-hide="vm.page">{{ vm.message }}<a ui-sref="signIn" class="green"> Sign In</a></p>
+                <p class="center" ng-show="vm.page">{{ vm.message }}<a ui-sref="createAccount" class="green"> Create Account</a></p>
 
             </div>
         </form>

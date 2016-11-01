@@ -21,6 +21,7 @@
         }
 
         function createAccount(user) {
+          if (user.password === user.confirm){
             console.log("create account function")
             return authFactory.createAccount(user).then(function() {
               vm.login(user);
@@ -28,6 +29,10 @@
             .catch(function(error) {
                 vm.error = error;
             });
+          }
+          else {
+            vm.error = "Passwords do not match"
+          }
         }
 
         function login(user) {

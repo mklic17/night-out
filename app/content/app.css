@@ -2,6 +2,9 @@
 .row {
   max-width: 100%;
 }
+.green {
+  color: #87d37c
+}
 .menu {
   background-color: #292c2f;
   padding: 1.5rem 3rem;
@@ -62,10 +65,11 @@
   font-size: 1.5rem;
   line-height: 1;
   margin: 0 0 1rem 0;
-  color: #fff;
+  /*color: #87d37c;*/
 }
+
   .name a {
-    color: white; /*#87d37c*/
+    color: #87d37c;
     margin-right: 0.5rem;
   }
   .name a:hover {
@@ -86,6 +90,7 @@
 .icons {
   float: right;
 }
+
 
 .homeImage h5 {
    z-index:100;

@@ -1,4 +1,4 @@
-<a ui-sref="activity"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back</a>
+<a ui-sref="activity" class="green"><i class="fa fa-arrow-left" aria-hidden="true"></i>Back</a>
 <form ng-submit="vm.addSubmission()">
   <div class="row">
     <div class="small-11 small-centered columns">
@@ -65,7 +65,7 @@
         <div class="small-2 columns">
           <select ng-model="vm.newTask.age" required>
             <option value="" disabled selected>Age</option>
-            <option value="No">21-</option>
+            <option value="No">Under 21</option>
             <option value="Yes">21+</option>
           </select>
         </div>
