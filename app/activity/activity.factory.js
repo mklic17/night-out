@@ -11,7 +11,6 @@
       var tasks = null;
 
       var service = {
-
         restart: restart,
         Task: Task,
         // tasksByUser: tasksByUser,

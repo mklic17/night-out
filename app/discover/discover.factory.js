@@ -33,13 +33,15 @@
       }
 
       var start = firebaseFactory.refRoot.ref("tasks")
-      start.orderByChild("category").equalTo(cont.category).on("child_added", function(snapshot) {
+      start.orderByChild("location").equalTo(cont.location).on("child_added", function(snapshot) {
         var x = snapshot.val();
-        if ((cont.price != '') && (x.price == cont.price)){
-          var here = document.getElementById('here');
-          if ((x.age === cont.age) || (cont.age === '')){
-            var z = createTableElement(x);
-            here.appendChild(z)
+        if ((cont.category == x.category)) {
+          if ((cont.price != '') && (x.price == cont.price)){
+            var here = document.getElementById('here');
+            if ((x.age === cont.age) || (cont.age === '')){
+              var z = createTableElement(x);
+              here.appendChild(z)
+            }
           }
         }
       });
@@ -53,6 +55,7 @@
         createTd(x.category, tr);
         createTd(x.summary, tr);
         createTd(getTime(x.time), tr);
+        createTd(x.location, tr);
         return tr;
     }
 

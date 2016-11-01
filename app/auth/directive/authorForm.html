@@ -6,18 +6,18 @@
                 <h4 class="text-center" ng-bind="vm.formName"></h4>
 
                 <!-- server Auth fails -->
-                <div class="" ng-show="vm.error" ng-bind="vm.error"></div>
+                <div class="error center" ng-show="vm.error" ng-bind="vm.error"></div>
 
                 <label>Email
                   <input type="email" required autofocus ng-model="vm.user.email" ng-model-options="{ updateOn: 'default blur', debounce: { 'default': 750, 'blur': 0 } }" placeholder="somebody@example.com">
                 </label>
 
                 <!-- email errors -->
-                <div class="" ng-show="authorForm.$submitted && authorForm.email.$error.required">
+                <div class="error center" ng-show="authorForm.$submitted && authorForm.email.$error.required">
                     Email is blank
                 </div>
 
-                <div class="" ng-show="authorForm.$submitted && authorForm.email.$error.email">
+                <div class="error center" ng-show="authorForm.$submitted && authorForm.email.$error.email">
                     Wrong format
                 </div>
 
@@ -25,7 +25,7 @@
                   <input type="password" required placeholder="Password" ng-model="vm.user.password">
                 </label>
 
-                <div class="" ng-show="authorForm.$submitted && authorForm.password.$error.required">
+                <div class="error center" ng-show="authorForm.$submitted && authorForm.password.$error.required">
                     Password is blank
                 </div>
 

@@ -24,6 +24,7 @@
       var vm = this;
       vm.addOne = addOne;
       vm.getTime = getTime;
+      vm.subtractOne = subtractOne;
       vm.remove = remove;
 
       ///////////////////////
@@ -49,6 +50,11 @@
         else {
           return `Posted ${Math.ceil(time / 604800)} week(s) ago`;
         }
+      }
+
+      function subtractOne(task) {
+        task.likes -= 1;
+        vm.tasks.$save(task);
       }
 
       function remove(task) {

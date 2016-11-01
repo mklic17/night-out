@@ -21,6 +21,7 @@
         }
 
         function createAccount(user) {
+            console.log("create account function")
             return authFactory.createAccount(user).then(function() {
               vm.login(user);
             })
@@ -30,6 +31,7 @@
         }
 
         function login(user) {
+          console.log("Login function")
             return authFactory.login(user).then(function(user) {
                 $state.go('activity');
             })
