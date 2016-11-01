@@ -30,7 +30,6 @@
 
       function addOne(task) {
         task.likes += 1
-        console.log(task.likes);
         vm.tasks.$save(task)
       }
 
